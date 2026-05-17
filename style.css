@@ -3051,5 +3051,60 @@ header.scrolled .nav{
     line-height: 1.1;
   }
 
-}
+}@media (max-width: 768px) {
 
+  .nav-links {
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    font-size: 0.8rem;
+  }
+
+  .nav {
+    flex-direction: column;
+    padding: 12px;
+  }
+
+  .logo {
+    font-size: 1rem;
+  }
+
+  .theme-toggle {
+    width: 36px;
+    height: 36px;
+  }
+
+}@media (max-width: 768px) {
+
+  /* STOP all forced stacking */
+  .about-grid,
+  .contact-grid,
+  .projects-grid,
+  .services-grid,
+  .interactive-wrapper,
+  .about-row,
+  .funfact-images,
+  .milestone-item,
+  .timeline {
+    display: inherit !important;
+    grid-template-columns: inherit !important;
+    flex-direction: inherit !important;
+  }
+
+}
+@media (max-width: 768px) {
+
+  body {
+    transform: scale(0.85);
+    transform-origin: top center;
+  }
+
+}@media (max-width: 768px) {
+
+  .container {
+    width: 1280px !important;
+    max-width: 1280px !important;
+  }
+
+}
