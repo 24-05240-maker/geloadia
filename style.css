@@ -2832,9 +2832,26 @@ header.scrolled .nav{
 
 /* MOBILE NAV CLEANUP */
 @media(max-width:900px){
-  .nav-links{
-    display:none;
-  }
+.nav-links{
+  display:flex;
+  gap:.8rem;
+
+  overflow-x:auto;
+  scrollbar-width:none;
+
+  -ms-overflow-style:none;
+}
+
+.nav-links::-webkit-scrollbar{
+  display:none;
+}
+
+.nav-links a{
+  font-size:.72rem;
+  white-space:nowrap;
+}
+
+
 
   .nav{
     padding:1rem 1.2rem;
