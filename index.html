@@ -1073,30 +1073,48 @@
       </div>
 
   
-      <form class="glass-card contact-form reveal">
+<form 
+  action="https://formsubmit.co/geloadia5@gmail.com"
+  method="POST"
+  class="glass-card contact-form reveal"
+>
 
-        <input
-          type="text"
-          placeholder="Your Name"
-          required
-        >
+  <!-- DISABLE CAPTCHA -->
+  <input type="hidden" name="_captcha" value="false">
 
-        <input
-          type="email"
-          placeholder="Email Address"
-          required
-        >
+  <!-- AFTER SUBMIT -->
+  <input 
+    type="hidden" 
+    name="_next" 
+    value="https://24-05240-maker.github.io/geloadia/"
+  >
 
-        <textarea
-          placeholder="Tell me about your idea..."
-          required
-        ></textarea>
+  <input
+    type="text"
+    name="name"
+    placeholder="Your Name"
+    required
+  >
 
-        <button type="submit" class="btn btn-primary">
-          Send a Message
-        </button>
+  <input
+    type="email"
+    name="email"
+    placeholder="Email Address"
+    required
+  >
 
-      </form>
+  <textarea
+    name="message"
+    placeholder="Tell me about your idea..."
+    required
+  ></textarea>
+
+  <button type="submit" class="btn btn-primary">
+    Send a Message
+  </button>
+
+</form>
+
 
     </div>
 
