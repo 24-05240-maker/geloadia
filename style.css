@@ -2832,15 +2832,6 @@ header.scrolled .nav{
 
 /* MOBILE NAV CLEANUP */
 @media(max-width:900px){
-.nav-links{
-  display:flex;
-  gap:.8rem;
-
-  overflow-x:auto;
-  scrollbar-width:none;
-
-  -ms-overflow-style:none;
-}
 
 .nav-links::-webkit-scrollbar{
   display:none;
@@ -3037,36 +3028,73 @@ header.scrolled .nav{
 
   /* NAVBAR */
 
+  /* =========================================
+   MOBILE NAVBAR FIX
+========================================= */
+
+@media (max-width:768px){
+
   header{
     padding:0 10px;
   }
 
   .nav{
     width:100%;
-    border-radius:20px;
-    padding:.8rem 1rem;
+    border-radius:22px;
+
+    padding:.75rem 1rem;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    gap:.8rem;
   }
 
+  /* LOGO */
+  .logo{
+    font-size:.9rem;
+    flex-shrink:0;
+  }
+
+  /* LINKS */
   .nav-links{
     display:flex;
-    gap:.7rem;
+    align-items:center;
+
+    gap:.9rem;
+
+    flex:1;
 
     overflow-x:auto;
     scrollbar-width:none;
 
     -ms-overflow-style:none;
+
+    padding:0 .3rem;
   }
 
   .nav-links::-webkit-scrollbar{
     display:none;
   }
 
-}
+  .nav-links a{
+    white-space:nowrap;
 
-  .theme-toggle{
-    width:36px;
-    height:36px;
+    font-size:.72rem;
+
+    flex-shrink:0;
   }
+
+  /* THEME BUTTON */
+  .theme-toggle{
+    width:34px;
+    height:34px;
+
+    flex-shrink:0;
+  }
+
+}
 
   /* GRID FIX */
 
@@ -3294,8 +3322,4 @@ header.scrolled .nav{
     height:180px;
     filter:blur(80px);
   }
-
-
-
-
-
+}
