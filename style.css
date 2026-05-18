@@ -61,8 +61,11 @@ body{
 }
 
 .container{
-  width:min(92%,1280px);
+  width:100%;
+  max-width:1120px;
   margin:auto;
+  padding-inline:24px;
+  box-sizing:border-box;
 }
 
 .section{
@@ -3321,5 +3324,179 @@ header.scrolled .nav{
     width:180px;
     height:180px;
     filter:blur(80px);
+  }
+}@media(max-width:768px){
+
+  .container{
+    padding-inline:18px;
+  }
+
+}
+
+@media(max-width:480px){
+
+  .container{
+    padding-inline:14px;
+  }
+
+}/* =========================================
+   FINAL RESPONSIVE FIX
+========================================= */
+
+html,
+body{
+  width:100%;
+  overflow-x:hidden;
+}
+
+/* PREVENT ELEMENT OVERFLOW */
+img,
+video,
+canvas{
+  max-width:100%;
+  display:block;
+}
+
+/* FLEX + GRID SAFETY */
+.projects-grid,
+.services-grid,
+.about-grid,
+.contact-grid,
+.about-row,
+.interactive-wrapper,
+.milestone-item{
+  width:100%;
+}
+
+/* REMOVE FIXED WIDTH ISSUES */
+.glass-card,
+.project-card,
+.cinematic-image,
+.id-card{
+  max-width:100%;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width:1024px){
+
+  .services-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .projects-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .interactive-wrapper{
+    grid-template-columns:1fr;
+    gap:3rem;
+  }
+
+  .interactive-right{
+    justify-content:center;
+    height:auto;
+    padding-right:0;
+  }
+
+  .lanyard-string{
+    display:none;
+  }
+
+  .lanyard-wrapper{
+    position:relative;
+    top:0;
+    right:auto;
+  }
+
+  .id-card{
+    top:0;
+    right:auto;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width:768px){
+
+  .container{
+    width:92%;
+  }
+
+  .hero{
+    min-height:auto;
+    padding:130px 0 90px;
+  }
+
+  .hero-name{
+    font-size:clamp(2.5rem,13vw,4rem);
+  }
+
+  .nav{
+    border-radius:20px;
+    padding:.8rem 1rem;
+  }
+
+  .nav-links{
+    overflow-x:auto;
+    gap:.9rem;
+  }
+
+  .nav-links a{
+    font-size:.72rem;
+    white-space:nowrap;
+  }
+
+  .projects-grid,
+  .services-grid,
+  .about-grid,
+  .contact-grid,
+  .about-row,
+  .interactive-wrapper,
+  .milestone-item{
+    grid-template-columns:1fr !important;
+  }
+
+  .project-image img{
+    height:220px;
+  }
+
+  .milestone-image img{
+    height:240px;
+  }
+
+  .cinematic-image img{
+    height:320px;
+  }
+
+  .interactive-right{
+    width:100%;
+    overflow:hidden;
+    justify-content:center;
+    align-items:center;
+  }
+
+  .id-card{
+    width:min(92vw,320px);
+    margin:auto;
+    transform:none !important;
+  }
+
+  .timeline-line,
+  .milestone-progress-line{
+    left:14px;
+  }
+
+  .timeline-item,
+  .milestone-item{
+    padding-left:3rem;
+  }
+
+  .timeline-dot{
+    left:5px;
   }
 }
