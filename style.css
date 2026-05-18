@@ -3048,8 +3048,20 @@ header.scrolled .nav{
   }
 
   .nav-links{
+    display:flex;
+    gap:.7rem;
+
+    overflow-x:auto;
+    scrollbar-width:none;
+
+    -ms-overflow-style:none;
+  }
+
+  .nav-links::-webkit-scrollbar{
     display:none;
   }
+
+}
 
   .theme-toggle{
     width:36px;
@@ -3283,7 +3295,7 @@ header.scrolled .nav{
     filter:blur(80px);
   }
 
-}
+
 
 
 
